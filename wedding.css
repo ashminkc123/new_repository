@@ -1,0 +1,193 @@
+/* styles.css - Fairytale single-wedding portal */
+/* Use system fonts where possible, with Google fonts fallback present in the HTML */
+
+:root{
+  --bg: #fffafc;
+  --card: #ffffff;
+  --muted: #6b6b6b;
+  --accent: #c77a9a;
+  --accent-2: #f1d9e7;
+  --glass: rgba(255,255,255,0.7);
+  --radius: 12px;
+  --max-width: 1100px;
+  --content-pad: 20px;
+}
+
+*{box-sizing: border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #fffafc 0%, #fff4f8 100%);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  padding-bottom:40px;
+}
+
+/* Header */
+.site-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:18px;
+  max-width:var(--max-width);
+  margin:18px auto;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.monogram{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--accent) 0%, #f7b3d0 100%);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-family:"Playfair Display", serif;
+  font-size:18px;
+  box-shadow:0 6px 18px rgba(199,122,154,0.15);
+}
+.brand h1{
+  margin:0;
+  font-family:"Playfair Display", serif;
+  font-size:20px;
+  letter-spacing:0.6px;
+}
+.tagline{margin:0;color:var(--muted);font-size:13px}
+
+/* Nav */
+.main-nav a{
+  text-decoration:none;
+  color:var(--muted);
+  margin-left:12px;
+  font-weight:600;
+  font-size:14px;
+}
+.main-nav a:hover{color:var(--accent)}
+
+/* Layout */
+main{max-width:var(--max-width);margin: 8px auto;padding:0 18px}
+
+/* Hero */
+.hero{
+  display:grid;
+  grid-template-columns: 1fr 420px;
+  gap:22px;
+  align-items:center;
+  margin-bottom:22px;
+}
+.hero-left h2{
+  font-family:"Playfair Display", serif;
+  font-size:34px;
+  margin:0 0 8px 0;
+}
+.hero-sub{color:var(--muted);margin-top:0}
+.hero-image{
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 14px 40px rgba(0,0,0,0.06);
+  background:var(--accent-2);
+  min-height:220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Countdown */
+.countdown{display:flex;gap:12px;margin:12px 0}
+.countdown div{
+  background:var(--card);
+  border-radius:10px;
+  padding:10px 12px;
+  min-width:72px;
+  text-align:center;
+  box-shadow:0 6px 18px rgba(0,0,0,0.04);
+}
+.countdown span{display:block;font-weight:700;font-size:18px}
+.countdown small{color:var(--muted);font-size:12px}
+
+/* CTA */
+.cta{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 18px;
+  background:linear-gradient(90deg,var(--accent),#e696b9);
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:600;
+  box-shadow:0 8px 30px rgba(199,122,154,0.18);
+}
+
+/* Cards / sections */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:var(--content-pad);
+  margin-bottom:18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.03);
+}
+
+/* RSVP form */
+.rsvp-form{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap:10px;
+  align-items:end;
+}
+.rsvp-form label{display:flex;flex-direction:column;font-size:13px;color:var(--muted)}
+.rsvp-form input, .rsvp-form select{
+  padding:8px 10px;border-radius:8px;border:1px solid #eee;background:#fafafa;font-size:14px;
+}
+.btn-primary{
+  padding:10px 14px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--accent),#e696b9);color:#fff;font-weight:700;cursor:pointer;
+}
+
+/* Details */
+.details-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.details-grid iframe{width:100%;min-height:180px;border:0;border-radius:10px;}
+
+/* Timeline */
+.timeline ol{padding-left:20px}
+
+/* Story */
+.story-timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.story-timeline article{background:linear-gradient(180deg,#fff,#fffafc);padding:12px;border-radius:10px;border:1px solid #f3e6ea}
+
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:12px}
+.thumb{border-radius:8px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.upload{display:inline-block;margin-top:12px}
+.upload input{display:none}
+
+/* Guestbook */
+.guestbook-form{display:flex;gap:10px;flex-wrap:wrap}
+.guestbook-form input, .guestbook-form textarea{flex:1 1 200px;padding:8px;border-radius:8px;border:1px solid #eee}
+.btn-secondary{padding:10px 12px;border-radius:10px;border:1px solid #ddd;background:#fff;cursor:pointer}
+
+/* Gifts */
+.gifts-grid{display:flex;gap:12px;flex-wrap:wrap}
+.gift-card{display:inline-block;padding:12px;border-radius:10px;border:1px dashed #f0d6e2;text-decoration:none;color:var(--muted)}
+
+/* Footer */
+.site-footer{text-align:center;color:var(--muted);margin-top:12px}
+
+/* Responsiveness */
+@media (max-width: 920px){
+  .hero{grid-template-columns: 1fr}
+  .main-nav{display:none}
+}
+@media (max-width: 520px){
+  .brand h1{font-size:16px}
+  .monogram{width:56px;height:56px;font-size:16px}
+  .countdown div{min-width:56px;padding:8px}
+}

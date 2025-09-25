@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fairytale — Our Wedding</title>
+
+  <!-- Google font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- main stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <meta name="description" content="Join us for our happily ever after — wedding invitation, RSVP, story, gallery and gifts." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="monogram">A ♥ J</div>
+      <h1>Amelia &amp; Jonah</h1>
+      <p class="tagline">Join our Fairytale — September 18, 2026</p>
+    </div>
+    <nav class="main-nav">
+      <a href="#invite">Invite</a>
+      <a href="#details">Details</a>
+      <a href="#story">Our Story</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#guestbook">Guestbook</a>
+      <a href="#gifts">Gifts</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero / Countdown -->
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Our Fairytale Begins</h2>
+        <p class="hero-sub">We would be honored if you joined us for the celebration.</p>
+        <div class="countdown" id="countdown">
+          <div><span id="days">--</span><small>Days</small></div>
+          <div><span id="hours">--</span><small>Hours</small></div>
+          <div><span id="mins">--</span><small>Minutes</small></div>
+          <div><span id="secs">--</span><small>Seconds</small></div>
+        </div>
+        <a class="cta" href="#invite">RSVP Now</a>
+      </div>
+      <div class="hero-right">
+        <div class="hero-image" aria-hidden="true">
+          <!-- Placeholder; replace with real image -->
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="300" fill="#f6e9ef" />
+            <text x="50%" y="50%" text-anchor="middle" fill="#c77" font-size="20" font-family="Inter, sans-serif">Add your hero image here</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Invitation / RSVP -->
+    <section id="invite" class="card section-invite">
+      <h3>You're Invited</h3>
+      <p>We can't wait to celebrate with you. Please RSVP below.</p>
+
+      <form id="rsvpForm" class="rsvp-form" autocomplete="off">
+        <label>
+          Full name
+          <input required type="text" id="guestName" placeholder="Your full name" />
+        </label>
+
+        <label>
+          Attending?
+          <select required id="attending">
+            <option value="">Select</option>
+            <option value="yes">Yes — I'll be there</option>
+            <option value="no">No — Sorry I can't make it</option>
+            <option value="maybe">Maybe</option>
+          </select>
+        </label>
+
+        <label>
+          Plus one?
+          <input type="number" min="0" max="1" id="plusOne" value="0" />
+        </label>
+
+        <label>
+          Dietary preference
+          <select id="diet">
+            <option value="">No preference</option>
+            <option>Vegetarian</option>
+            <option>Vegan</option>
+            <option>Gluten-free</option>
+            <option>Halal</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <button type="submit" class="btn-primary">Send RSVP</button>
+      </form>
+
+      <div class="rsvp-stats" aria-live="polite">
+        <p><strong>RSVP summary:</strong> <span id="rsvpSummary">0 going • 0 maybe • 0 not attending</span></p>
+      </div>
+    </section>
+
+    <!-- Event details -->
+    <section id="details" class="card">
+      <h3>Event Details</h3>
+      <div class="details-grid">
+        <div>
+          <h4>Ceremony</h4>
+          <p>September 18, 2026 — 3:00 PM</p>
+          <p>St. Michael's Chapel, 123 Rose Lane</p>
+        </div>
+        <div>
+          <h4>Reception</h4>
+          <p>Following ceremony — 6:00 PM</p>
+          <p>The Willow Hall, 56 Garden Ave</p>
+        </div>
+        <div>
+          <h4>Dress Code</h4>
+          <p>Garden Formal — pastels & florals encouraged</p>
+        </div>
+        <div>
+          <h4>Directions</h4>
+          <!-- Replace the src with your Google Maps embed link -->
+          <iframe
+            title="venue map"
+            src="https://maps.google.com/maps?q=Sydney%20Opera%20House&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <h4>Schedule</h4>
+        <ol>
+          <li>2:30 PM — Guest arrival</li>
+          <li>3:00 PM — Ceremony begins</li>
+          <li>4:00 PM — Photo session</li>
+          <li>6:00 PM — Reception & dinner</li>
+          <li>8:30 PM — Dancing</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section id="story" class="card">
+      <h3>Our Story</h3>
+      <div class="story-timeline">
+        <article>
+          <h5>First Met</h5>
+          <time>June 2018</time>
+          <p>We met at a mutual friend’s picnic — a shared love of coffee and terrible puns.</p>
+        </article>
+        <article>
+          <h5>First Trip</h5>
+          <time>March 2019</time>
+          <p>Backpacked through the Blue Mountains together and discovered we can survive each other's playlists.</p>
+        </article>
+        <article>
+          <h5>The Proposal</h5>
+          <time>October 2024</time>
+          <p>On a rainy evening, Jonah surprised Amelia with a picnic under fairy lights — she said yes!</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="card">
+      <h3>Gallery</h3>
+      <p>Pre-wedding photos & memories. Guests can add photos after the event.</p>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- images injected here -->
+      </div>
+
+      <label class="upload">
+        Upload a photo
+        <input type="file" id="photoUpload" accept="image/*" />
+      </label>
+    </section>
+
+    <!-- Guestbook -->
+    <section id="guestbook" class="card">
+      <h3>Guestbook</h3>
+      <p>Leave a message for the couple.</p>
+
+      <form id="guestbookForm" class="guestbook-form" autocomplete="off">
+        <input type="text" id="gbName" placeholder="Your name" required />
+        <textarea id="gbMessage" rows="3" placeholder="Your message" required></textarea>
+        <button class="btn-secondary" type="submit">Post</button>
+      </form>
+
+      <ul id="guestbookList" class="guestbook-list">
+        <!-- messages -->
+      </ul>
+    </section>
+
+    <!-- Gifts -->
+    <section id="gifts" class="card">
+      <h3>Gifts & Registry</h3>
+      <p>Your presence is the present — but if you'd like to give, here's our registry & honeymoon fund link.</p>
+      <div class="gifts-grid">
+        <a class="gift-card" href="#" target="_blank" rel="noopener">Registry on ExampleStore</a>
+        <a class="gift-card" href="#" target="_blank" rel="noopener">Honeymoon Fund</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© Fairytale • Amelia &amp; Jonah • 2026</p>
+  </footer>
+
+  <!-- Small unobtrusive script powering RSVP, countdown, local guestbook & gallery -->
+  <script>
+    (function () {
+      // --------- Config ----------
+      const weddingDate = new Date('2026-09-18T15:00:00'); // ceremony date/time in ISO
+      const rsvpKey = 'fairytale_rsvps_v1';
+      const gbKey = 'fairytale_guestbook_v1';
+      const galleryKey = 'fairytale_gallery_v1';
+
+      // --------- Countdown ----------
+      function updateCountdown() {
+        const now = new Date();
+        const diff = weddingDate - now;
+        if (diff <= 0) {
+          document.getElementById('countdown').textContent = 'We are married!';
+          return;
+        }
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const mins = Math.floor((diff / (1000 * 60)) % 60);
+        const secs = Math.floor((diff / 1000) % 60);
+        document.getElementById('days').textContent = days;
+        document.getElementById('hours').textContent = hours.toString().padStart(2,'0');
+        document.getElementById('mins').textContent = mins.toString().padStart(2,'0');
+        document.getElementById('secs').textContent = secs.toString().padStart(2,'0');
+      }
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+
+      // --------- RSVP logic ----------
+      function loadRSVPs() {
+        try { return JSON.parse(localStorage.getItem(rsvpKey)) || []; } catch(e){ return []; }
+      }
+      function saveRSVPs(arr) { localStorage.setItem(rsvpKey, JSON.stringify(arr)); }
+
+      function renderRSVPSummary() {
+        const data = loadRSVPs();
+        const yes = data.filter(x => x.attending === 'yes').length;
+        const maybe = data.filter(x => x.attending === 'maybe').length;
+        const no = data.filter(x => x.attending === 'no').length;
+        document.getElementById('rsvpSummary').textContent = `${yes} going • ${maybe} maybe • ${no} not attending`;
+      }
+      renderRSVPSummary();
+
+      document.getElementById('rsvpForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('guestName').value.trim();
+        const attending = document.getElementById('attending').value;
+        const plusOne = parseInt(document.getElementById('plusOne').value, 10) || 0;
+        const diet = document.getElementById('diet').value || '';
+
+        if (!name || !attending) return;
+
+        const data = loadRSVPs();
+        data.push({ name, attending, plusOne, diet, time: new Date().toISOString() });
+        saveRSVPs(data);
+        renderRSVPSummary();
+
+        // simple feedback
+        alert('Thank you — your RSVP is recorded.');
+        this.reset();
+      });
+
+      // --------- Guestbook ----------
+      function loadGuestbook(){ try { return JSON.parse(localStorage.getItem(gbKey)) || []; } catch(e){ return []; } }
+      function saveGuestbook(arr){ localStorage.setItem(gbKey, JSON.stringify(arr)); }
+
+      function renderGuestbook() {
+        const list = document.getElementById('guestbookList');
+        list.innerHTML = '';
+        const posts = loadGuestbook().slice().reverse();
+        posts.forEach(p => {
+          const li = document.createElement('li');
+          li.innerHTML = '<strong>' + escapeHtml(p.name) + '</strong><p>' + escapeHtml(p.message) + '</p><time>' + new Date(p.time).toLocaleString() + '</time>';
+          list.appendChild(li);
+        });
+      }
+      renderGuestbook();
+
+      document.getElementById('guestbookForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('gbName').value.trim();
+        const message = document.getElementById('gbMessage').value.trim();
+        if (!name || !message) return;
+        const posts = loadGuestbook();
+        posts.push({ name, message, time: new Date().toISOString() });
+        saveGuestbook(posts);
+        renderGuestbook();
+        this.reset();
+      });
+
+      // --------- Gallery (local only demo) ----------
+      function loadGallery(){ try { return JSON.parse(localStorage.getItem(galleryKey)) || []; } catch(e){ return []; } }
+      function saveGallery(arr){ localStorage.setItem(galleryKey, JSON.stringify(arr)); }
+
+      function renderGallery() {
+        const grid = document.getElementById('galleryGrid');
+        grid.innerHTML = '';
+        const items = loadGallery().slice().reverse();
+        items.forEach(src => {
+          const div = document.createElement('div');
+          div.className = 'thumb';
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = 'Guest photo';
+          div.appendChild(img);
+          grid.appendChild(div);
+        });
+      }
+      renderGallery();
+
+      document.getElementById('photoUpload').addEventListener('change', function (e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        if (!file.type.startsWith('image/')) { alert('Please upload an image.'); return; }
+        const reader = new FileReader();
+        reader.onload = function (ev) {
+          const arr = loadGallery();
+          arr.push(ev.target.result);
+          saveGallery(arr);
+          renderGallery();
+          e.target.value = '';
+        };
+        reader.readAsDataURL(file);
+      });
+
+      // --------- util ----------
+      function escapeHtml(s){ return s.replace(/[&<>"']/g, function(m){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]); }); }
+
+    })();
+  </script>
+</body>
+</html>
